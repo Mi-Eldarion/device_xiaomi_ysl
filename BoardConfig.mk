@@ -10,7 +10,15 @@ DEVICE_PATH := device/xiaomi/ysl
 include device/xiaomi/msm8953-common/BoardConfigCommon.mk
 
 # Kernel
-TARGET_KERNEL_CONFIG := ysl_defconfig
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 androidboot.usbconfigfs=true
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_PAGESIZE :=  2048
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+TARGET_KERNEL_SOURCE := kernel/xiaomi/ysl
+TARGET_KERNEL_CONFIG := vendor/msm8953-perf_defconfig
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := aosp
 
 # Display
 TARGET_SCREEN_DENSITY := 280
