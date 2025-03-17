@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ysl.mk
+    $(LOCAL_DIR)/miku_ysl.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_ysl-user \
-    lineage_ysl-userdebug \
-    lineage_ysl-eng
+    miku_ysl-user \
+    miku_ysl-userdebug \
+    miku_ysl-eng

@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit from ysl device
 $(call inherit-product, device/xiaomi/ysl/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Miku stuff.
+$(call inherit-product, vendor/miku/build/product/miku_product.mk)
 
 # Flags
 TARGET_BOOT_ANIMATION_RES := 720
